@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    text-align: center;
+    margin-block: 1rem;
+}
+form{
+    max-width: 50%;
+    margin-inline: auto;
+    background-color: rgb(251, 248, 248);
+    padding-inline:2rem;
+    padding-block:3rem;
+    margin-block: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px lightgray;
+
+    /*Background image*/
+     background-image:url("cat.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+
+}
+select,
+textarea,
+input{
+    width:100%;
+    height: 50%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding:0.25rem, 0.5rem;
+    border-radius: 5px;
+    border:1px solid lightgray;
+    
+   
+}
+
+input:focus{
+    outline: 1px solid lightpink;
+    border: 1px solid white;
+}
+
+input[type=checkbox],
+input[type=radio]{
+    width:auto;
+    outline: none;
+    
+}
+
+input[type=color]{
+    width:auto;
+    outline: none;
+    
+}
+.gender,
+.hobbies{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+button{
+    width:100%;
+    border-radius: 5px;
+    border:none;
+    background-color:lightblue;
+    color: aliceblue;
+    padding:0.5rem, 1rem;
+}
+button:hover{
+    background-color: darkblue;
+    cursor: pointer;
+    
+}
+.password{
+    position: relative;
+}
+.password i{
+    position: absolute;
+    right: 0.2rem;
+    top: 20%;
+    
+ 
+}
+
+
