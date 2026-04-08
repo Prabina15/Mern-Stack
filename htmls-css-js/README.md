@@ -94,7 +94,11 @@ through the internet using browser.
 -For CSS, always use class
 -for JS, use Id
 
+## Tailwind
 
-
-
+-CSs frameworl
+-Used for building UI rapidly
+-We use pre defined utility classes directly in HTML
+-Highly customizable, world in dark mode, JIT(Just in time) compiler for faster builds
+-
 
