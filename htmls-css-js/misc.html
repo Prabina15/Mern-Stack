@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* --variable-name: value */
+        :root{
+            --primary-color:#38554b;
+            --secondary-color:#d1a31b;
+            --text-color:#4c4d4f;
+            
+
+
+        }
+        h1{
+            color:white;
+            opacity: 0.5;/* 0 to 1 */
+        }
+        p{
+            color: var(--secondary-color);
+        }
+        .box{
+            /* background-color: var(--primary-color);
+            opacity:1; */
+            background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));/*direction, color1,color2,...*/
+            padding-block:5rem;
+        }
+        button{
+
+            /* background-color: var(--primary-color); */
+            background-image:radial-gradient(black, blue, red, green);
+            color:white;
+            padding:1rem, 5rem;
+        }
+        .card{
+            background-image: conic-gradient(red, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>Hello, World!</h1>
+        </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+   <button>Click Me</button>
+   <div class="card"></div>
+
+</body>
+</html>
