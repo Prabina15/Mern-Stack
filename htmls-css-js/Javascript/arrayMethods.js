@@ -125,7 +125,7 @@ const groupedList = myList.reduce((acc, item) => {
     return acc;
 
 }, {});
-console.log(groupedList);
+console.log(groupedList);git
 
 
 

@@ -96,9 +96,61 @@ through the internet using browser.
 
 ## Tailwind
 
--CSs frameworl
+-CSS framework
 -Used for building UI rapidly
 -We use pre defined utility classes directly in HTML
 -Highly customizable, world in dark mode, JIT(Just in time) compiler for faster builds
--
 
+
+## Javascript
+- High-level programming language
+- Interpreted programming language
+- Built on c++
+- Dynamically type programming language
+- ECMA Script (ES6 2015) Standarization of JS
+- Used to build interactive website
+- NodeJS, Electro.JS, React NAtive, Tensorflow.js, REact, Vue
+
+
+4. ECMASCRIPT
+    - Template literals
+    - Spread operator
+    - Rest operator
+    - Arrow function
+    - Array Methods
+    - Destructing (Array/Object)
+    - String methids
+    - Object methods 
+
+## JS Semantics
+
+- Recommended javascript fi;es, variables, functions to be in  camelcase.
+- Variable names , file names : Noun (forEg: user, updatedProduct)
+- Functions, Methods names : Verb (forEg : creatUser , updateProduct)
+- Use singular or plural names based on items in data.(findUsers, findUsersById)
+-   
+
+============================
+
+ sentence case : Hello, World
+ snake case : hello_world
+ kebab case: hello-world
+ camel case : helloWorld
+ pascal case: HelloWorld
+
+==============================
+
+NodeJS
+
+==============================
+
+Modules: Filesystem, event, path , url
+Callback, Promise, Asyc/Await
+
+===============================
+
+React
+
+================================
+
+DOM manipulation
