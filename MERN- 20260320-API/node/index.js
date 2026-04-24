@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const fs = require("fs");
 // const { sum } = require("./utils");
 
@@ -22,7 +21,7 @@ const result = sum(10, 20);
 console.log(result);
 
 console.log("End");
-=======
+
 // const fs = require("fs");
 // const { sum } = require("./utils");
 
@@ -46,4 +45,4 @@ const result = sum(10, 20);
 console.log(result);
 
 console.log("End");
->>>>>>> 6702212 (fix project structure and add files)
+

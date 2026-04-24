@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //Promise: Async programming, promise is a future value
 //Pending -> fulfilled, rejected
 
@@ -29,7 +29,7 @@ fs.readFile("data/data.txt","utf-8").then((data) =>{
         .catch((error) => {
             console.log(error);
         });
-=======
+
 //Promise: Async programming, promise is a future value
 //Pending -> fulfilled, rejected
 
@@ -60,5 +60,5 @@ fs.readFile("data/data.txt","utf-8").then((data) =>{
         .catch((error) => {
             console.log(error);
         });
->>>>>>> 6702212 (fix project structure and add files)
+
    

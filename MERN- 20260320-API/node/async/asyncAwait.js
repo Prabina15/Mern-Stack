@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from "fs/promises";
 
 async function readData() {
@@ -30,7 +29,6 @@ const readMultipleData =async () =>{
     console.log(error);
   }
 }
-=======
 import fs from "fs/promises";
 
 async function readData() {
@@ -62,5 +60,3 @@ const readMultipleData =async () =>{
     console.log(error);
   }
 }
->>>>>>> 6702212 (fix project structure and add files)
-readMultipleData();

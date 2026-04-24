@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import path from "path";
 import url from "url";
 
@@ -15,7 +14,7 @@ const __dirName = path.dirname(__fileName);
 
 console.log(__fileName);
 console.log(__dirName);
-=======
+
 import path from "path";
 import url from "url";
 
@@ -32,4 +31,4 @@ const __dirName = path.dirname(__fileName);
 
 console.log(__fileName);
 console.log(__dirName);
->>>>>>> 6702212 (fix project structure and add files)
+// >>>>>>> 6702212 (fix project structure and add files)

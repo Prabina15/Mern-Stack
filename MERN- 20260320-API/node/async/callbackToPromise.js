@@ -1,34 +1,23 @@
-<<<<<<< HEAD
 import fs from "fs";
 
-const fetchData = new Promise ((resolve, reject) => {
-    fs.readFile("data/data.txt","utf-8",(error, data)=>{
-    if(error){
+const fetchData = () =>
+  new Promise((resolve, reject) => {
+    fs.readFile("data/file1.txt", "utf8", (error, data) => {
+      if (error) {
         reject(error);
-    }
-    else{
+      } else {
         resolve(data);
-    }
-});
-});
+      }
+    });
+  });
 
-fetchData.then((data) => {
-    console.log(data);
-=======
-import fs from "fs";
+// fetchData.then((data) => {
+//   console.log(data);
+// });
 
-const fetchData = new Promise ((resolve, reject) => {
-    fs.readFile("data/data.txt","utf-8",(error, data)=>{
-    if(error){
-        reject(error);
-    }
-    else{
-        resolve(data);
-    }
-});
-});
+async function myFetchData() {
+  const data = await fetchData();
+  console.log(data);
+}
 
-fetchData.then((data) => {
-    console.log(data);
->>>>>>> 6702212 (fix project structure and add files)
-});
+myFetchData();
