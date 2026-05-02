@@ -1,26 +1,33 @@
 import fs from "fs/promises";
+import Product from "../models/Product.js";
 const getAllProducts = async () => {
-    const products = await fs.readFile("src/data/products.json", "utf-8");
 
-    return JSON.parse(products);
+    const products = await Product.find();
+    return products;
+
 };
 
-const getFirstProduct = async () => {
-    const products = await fs.readFile("src/data/products.json", "utf-8");
-     const firstProduct = JSON.parse(products)[0];
-
-    return firstProduct;
-};
 const getProductById = async (id) => {
-
-    const products = await fs.readFile("src/data/products.json", "utf-8");
-  
-    const list = JSON.parse(products);
-    
-    
-    return  list.find((product) => product.id== id );
+   const product = await Product.findById(id);
+   return product;
 
 };
+const createProduct = async (data, userId) => {
+   
+  return await Product.create({ ...data, createdBy: userId });
+};
 
+ const updateProduct = async(id, input) =>{
+    return await Product.findByIdAndUpdate(id, input, {new:true });
+ };
+ const deleteProduct = async (id)=>{
+    await Product.findByIdAndDelete(id);
+ }
 
-export default {getAllProducts, getFirstProduct, getProductById};
+export default {
+    getAllProducts, 
+    getProductById, 
+    createProduct,
+    updateProduct,
+    deleteProduct,
+};

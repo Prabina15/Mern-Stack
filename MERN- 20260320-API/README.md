@@ -85,8 +85,158 @@
       c. Middlewares: Handle request/response, Logging , Auth
 
 2. Business logic layer
+      a. Services
 
 3. Data logic layer
+      a. Models
 
 4. Database layer
+
+# MongoDB
+
+- Non-relational database
+- Data are stored in colections & documents
+- Database: Main container, all collections are stored here
+- Collection: Equivalent to table of relational database
+- Document: Equivalent to Row
+- Field: Equivalent to Column
+
+## Tools Used
+
+- Locally: MongoDB Compass(Shell included)
+- Cloud: MongoDB Atlas
+
+**Run mongoDB in compass **
+
+1. Open mongoDB compass
+2. Setup a new connection(mongodb://localhost:27017)[mongodb://localhost:27017]
+
+## MongoDB Queries
+
+- `show dbs` : Show list of database
+- `use <dbname>` : Use existing database or create a new one
+- `show collections`: show list of collections in that db
+
+
+1. Create
+- `db.users.insertOne(name:"Ram)`
+- `db.users.insertMany([{name:"Hari", age:20}, {phone:98766666, address:"Bhaktapur"}])`
+
+2. Read
+- `db.users.find()`
+- `db.users.find({age:20})`: Returns multiple result if exists
+- `db.users.findOne({age:20})`
+
+3. Update
+- `db.users.updateOne({name:"Ram"}, {$set:{age:50}})`
+
+4. Delete
+
+- `db.users.deleteeOne is not a function`
+
+## Complex filters
+
+1. $eq: `db.users.find({name: {$eq:"Hari"}})`
+2. $ne: `db.users.find({name: {$ne:"Hari"}})`
+3. $gt/gte: `db.users.find({age: {$gt:20}})`
+4. $lt: `db.users.find({age: {$lt:24}})`
+5. $and: `db.users.find( {$and:[{name:"Hari"}, {age:20}]})`
+6. $or: `db.users.find( {$or:[{name:"Hari"}, {age:20}]})`
+7. $in: `db.users.find({name: {$in:["hari", "Rohan]}})`
+
+
+a. limit: db.users.find().limit(2)
+b. skip: db.users.find().skip(1)
+c. sort: db.users.find().sort({name:1}) //1: AScc, -1: 
+
+## Mongoose
+
+- ODM of MongoDB for Node.js
+- Create Schema
+- Validate Schema
+- Create models using schemas
+- Relationships
+
+# Cryptography
+## Encryption: Converting readable text to unreadable/cipher text
+
+## Decryption: Converting cipher text to readable text
+
+### Types
+- Symmetric: Same key is used for encryption and decryption
+- Assymetric: Different keys are used for encryption and decryption - private/public key(RSA)
+
+## Hashing
+- One way encryption
+- Convert readable text to cipher text but not back to readable
+- Hashing always returns same cipher  
+
+## Salt
+- Adding randon characters in the hash
+
+## Authentication & Authorization
+
+1. Authentication: Who you are? Logged in user
+2. Authorization: What you can do? User role
+
+## JSon Web Token(JWT)
+
+- Self verified
+- Temper proof
+- Used for both authentication & authorization
+
+
+### JWT Structure
+
+- Header
+- Pay Load
+- Signature
+
+## Storage
+
+1. Cookie Storage
+- Size: 4KB
+- Storage: Server & Browser
+- Expiry: Cookie expiry
+
+2. Local 
+- Size: 5-10MB
+- Storage: Only Browser
+- Expiry: Never
+
+3. Session Storage
+- Size: 5 MB
+- Storage: Only Browser
+- Expiry: On tab close
+
+## Auth process
+
+1. Login/Register sucess
+2. Generate Token 
+3. Store token: Cookie, Session, Local Storage
+4. Append the token in every request  to handle auth
+5. Verify the token and authenticate/authorize user
+
+
+## Middleware
+
+- Functions that lies between request and response
+- Function that has access of both request and response object.
+-It a has aditional functionality to go to next(middleware call)
+
+Browser ------ Request -------> Server
+Middleware,Middleware,Middleware
+Server ------- Resposne-------> Browser
+
+### Usage
+
+- Logging
+- Authentication & Authorzation
+- Request & Response object modification
+- Error handling
+- Data validation
+
+
+
+
 

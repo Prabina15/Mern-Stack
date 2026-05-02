@@ -1,10 +1,24 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 
-import fs from "fs/promises";
 import config from "./config/config.js";
-
 import productRoute from "./routes/product.route.js";
+import userRoute from "./routes/user.route.js";
+import authRoute from "./routes/auth.route.js";
+import connectDB from "./config/database.js";
+import bodyParser from "body-parser";
+import logger from "./middlewares/logger.js";
+import auth from "./middlewares/auth.js";
+
 const app = express();
+connectDB();
+
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(logger);
+
+
 
 app.get("/", (request, response) => {
     response.send("Home page");
@@ -19,6 +33,8 @@ app.post("/contact", (req, res)=> {
 });
 
 app.use("/api/products", productRoute);
+app.use("/api/users",auth,  userRoute);
+app.use("/api/auth",authRoute);
 // app.get("/product", async(req, res)=> {
 //     const products = await fs.readFile("src/data/products.json", "utf-8");
 
